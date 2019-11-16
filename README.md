@@ -1,2 +1,2 @@
 # VSSimulator
-Tool used to aid in debugging CLI for debugging communications with Visual Studio
+A Visual Studio like TCP client used in place of Visual Studio for development of CLI TCP server
