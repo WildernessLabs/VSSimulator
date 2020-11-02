@@ -54,7 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AsynchronousClient.cs" />
-    <Compile Include="AwaitServer.cs" />
     <Compile Include="VSSim.cs">
       <SubType>Form</SubType>
     </Compile>

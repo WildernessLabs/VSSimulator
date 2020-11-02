@@ -55,8 +55,8 @@ namespace VSSimulator
         {
             dataToSend = new byte[dataSize];
 
-            // Put something in the message start with space character and fill
-            // with ASCII alphanumerics
+            // Put something data in the message.
+            // Start with 0 and rollover at 255
             byte ch = 0;
             for (int i = 0; i < dataSize; i++)
             {
@@ -105,17 +105,17 @@ namespace VSSimulator
             // Verify that the data sent is the data received
             if(recvData.Length != dataToSend.Length)
             {
-                AddStatusText($"Length of data received {recvData.Length} not equal to length sent {dataToSend.Length}");
+                AddStatusText($"Length of data received {recvData.Length} not equal to length sent {dataToSend.Length}{Environment.NewLine}");
                 return;
             }
 
             if(recvData.SequenceEqual(dataToSend))
             {
-                AddStatusText($"SUCCESS - Data sent = data received");
+                AddStatusText($"SUCCESS - Data sent = data received{Environment.NewLine}");
             }
             else
             {
-                AddStatusText($"FAILED - Data sent != data received");
+                AddStatusText($"FAILED - Data sent != data received{Environment.NewLine}");
                 return;
             }
 
